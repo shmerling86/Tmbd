@@ -1,5 +1,6 @@
 app.service('actorService', function ($http, $q) {
 
+var SERVER ='https://json-server-heroku-xyvuvnooql.now.sh';
 
     function Actor(fName, lName, birthday, imageUrl, imdbUrl) {
         this.fName = fName;
@@ -16,7 +17,7 @@ app.service('actorService', function ($http, $q) {
     function readFile() {
         var async = $q.defer();
 
-        $http.get('actors/actor.json').then(function (response) {
+        $http.get(SERVER+'/actors').then(function (response) {
             actors.splice(0, actors.length);
             response.data.forEach(function (plainObj) {
                 var actor = new Actor(plainObj.fName, plainObj.lName, plainObj.birthday, plainObj.imageUrl, plainObj.imdbUrl);
@@ -31,6 +32,7 @@ app.service('actorService', function ($http, $q) {
     };
 
     return {
-        readFile: readFile
+        readFile: readFile,
+        SERVER: SERVER
     }
 });
