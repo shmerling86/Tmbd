@@ -1,0 +1,28 @@
+[
+
+{
+    "fName":"Brad",
+    "lName":"pitt",
+    "fullName": "fName + ' ' + lName",
+    "birthday":"1963-12-18",
+    "imageUrl":"https://m.media-amazon.com/images/M/MV5BMjA1MjE2MTQ2MV5BMl5BanBnXkFtZTcwMjE5MDY0Nw@@._V1_UX214_CR0,0,214,317_AL_.jpg",
+    "imdbUrl": "https://www.imdb.com/name/nm0000093/"
+},
+{
+    "fName":"Denzel",
+    "lName":"Washington",
+    "fullName": "fName + ' ' + lName",
+    "birthday":"1954-12-28",
+    "imageUrl":"https://m.media-amazon.com/images/M/MV5BMjE5NDU2Mzc3MV5BMl5BanBnXkFtZTcwNjAwNTE5OQ@@._V1_UY317_CR12,0,214,317_AL_.jpg",
+    "imdbUrl": "https://www.imdb.com/name/nm0000243/"
+},
+{
+    "fName":"Uma",
+    "lName":"Thurman",
+    "fullName": "fName + ' ' + lName",
+    "birthday":"1970-04-29",
+    "imageUrl":"https://m.media-amazon.com/images/M/MV5BMjMxNzk1MTQyMl5BMl5BanBnXkFtZTgwMDIzMDEyMTE@._V1_UX214_CR0,0,214,317_AL_.jpg",
+    "imdbUrl": "https://www.imdb.com/name/nm0000235/"
+}
+
+]
