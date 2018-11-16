@@ -18,7 +18,7 @@ var SERVER ='actors.json';
     function readFile() {
         var async = $q.defer();
 
-        $http.get(SERVER+'/actors').then(function (response) {
+        $http.get(SERVER).then(function (response) {
             actors.splice(0, actors.length);
             response.data.forEach(function (plainObj) {
                 var actor = new Actor(plainObj.fName, plainObj.lName, plainObj.birthday, plainObj.imageUrl, plainObj.imdbUrl);
