@@ -1,6 +1,6 @@
 <div class="container">
         <h2 class="mb-5 text-center text-light bg-dark">Actors Gallery</h2>
-        <select class="mb-1" ng-model="option" ng-options="item.presentation for item in filterOptions"></select>
+        <select class="mb-1" ng-model="option"  ng-options="item.presentation for item in filterOptions"></select>
         <input type="text" class="form-control mb-3" placeholder="Search actor" ng-model="actorsFilter">
         <div class="row">
             <div class="col-4-md m-auto" ng-repeat="actor in actors | filter : {fullName : actorsFilter} | orderBy: option.field">

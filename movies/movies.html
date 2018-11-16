@@ -1,8 +1,9 @@
 
     <div class="container" ng-controller="movieCtrl">
         <h2 class="mb-5 text-center text-light bg-dark">Movies Gallery</h2>
-        <select class="mb-1" ng-model="option" ng-options="item.presentation for item in filterOptions"></select>
-        <input type="text" class="form-control mb-1" placeholder="Search movie" ng-model="searchText" ng-change="searchMoviesByText()">
+        <!-- <select class="mb-1" ng-model="option" ng-options="item.presentation for item in filterOptions"></select> -->
+       
+        <input type="text" class="form-control mb-1" placeholder="Search & click it to add" ng-model="searchText" ng-change="searchMoviesByText()">
         <div class="row">
             <div class="col-md-12" ng-repeat="movie in movies | filter : {name : searchText} | orderBy: option.field">
                 <ul class="list-group mb-1">
