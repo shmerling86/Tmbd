@@ -4,6 +4,7 @@ app.controller('myCtrl', function ($scope, $log, $routeParams, actorService) {
 
     actorService.readFile().then(function (actors) {
     //regular route
+        console.log(actors)
         $scope.actors = actors;
 
     //dynamic route
