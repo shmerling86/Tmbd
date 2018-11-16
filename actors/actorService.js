@@ -1,6 +1,7 @@
 app.service('actorService', function ($http, $q) {
 
-var SERVER ='https://json-server-heroku-xyvuvnooql.now.sh';
+var SERVER1 ='https://json-server-heroku-xyvuvnooql.now.sh';
+var SERVER ='actors.json';
 
     function Actor(fName, lName, birthday, imageUrl, imdbUrl) {
         this.fName = fName;
