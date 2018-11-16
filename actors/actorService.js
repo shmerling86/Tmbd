@@ -19,6 +19,7 @@ var SERVER ='actors.json';
         var async = $q.defer();
 
         $http.get(SERVER).then(function (response) {
+            debugger
             actors.splice(0, actors.length);
             response.data.forEach(function (plainObj) {
                 var actor = new Actor(plainObj.fName, plainObj.lName, plainObj.birthday, plainObj.imageUrl, plainObj.imdbUrl);
