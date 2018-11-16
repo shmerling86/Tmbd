@@ -1,7 +1,7 @@
 app.service('actorService', function ($http, $q) {
 
 var SERVER1 ='https://json-server-heroku-xyvuvnooql.now.sh';
-var SERVER ='actors.json';
+var SERVER ='actors/actors.json';
 
     function Actor(fName, lName, birthday, imageUrl, imdbUrl) {
         this.fName = fName;
@@ -24,12 +24,13 @@ var SERVER ='actors.json';
             response.data.forEach(function (plainObj) {
                 var actor = new Actor(plainObj.fName, plainObj.lName, plainObj.birthday, plainObj.imageUrl, plainObj.imdbUrl);
                 actors.push(actor);
+               async.resolve(actors);
+});
             }, function (response) {
                 console.error(response);
                 async.reject([]);
             });
-            async.resolve(actors);
-        });
+        
         return async.promise;
     };
 
